@@ -1,34 +1,42 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Mi Presentación</title>
+  <title>Github Presentation with Reveal.js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Reveal.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css"> <!-- Tema no predeterminado -->
 
-  <!-- Highlight para código si necesitas -->
+  <!-- Highlight.js para código si fuera necesario -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
 </head>
 <body>
 
   <div class="reveal">
-    <div class="slides" data-markdown="slides.md" data-separator="^\n---\n" data-vertical="^\n--\n">
+    <div class="slides" data-markdown="slides.md"
+         data-separator="^\n---\n" 
+         data-vertical="^\n##\s" 
+         data-separator-vertical="^\n##\s"
+         data-charset="utf-8">
       <!-- El contenido se carga desde slides.md -->
     </div>
   </div>
 
+  <!-- Scripts de Reveal.js -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
+
   <script>
     Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      plugins: [ RevealMarkdown, RevealHighlight ]
+      hash: true,           // permite acceder a slides por URL
+      slideNumber: true,    // muestra número de slide
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
     });
   </script>
+
 </body>
 </html>
