@@ -6,111 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Reveal.js CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css"> <!-- Tema no predeterminado -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/league.css" id="theme">
 
-  <!-- Highlight.js CSS para código si quieres -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
+  <!-- Custom styles -->
+  <style>
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+    }
+    h1, h2, h3 {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+    p, li {
+      font-size: 1.1em;
+    }
+    .reveal section img {
+      border-radius: 8px;
+      max-width: 60%;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+      display: block;
+      margin: 20px auto;
+    }
+    ul {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="reveal">
-    <div class="slides">
-
-      <!-- Slide 1 -->
-      <section>
-        <h1>Github presentation with reveal.js framework</h1>
-        <p>By: Jon González</p>
-        <p>Date: 17/12/2025</p>
-      </section>
-
-      <!-- Slide 2 -->
-      <section>
-        <h2>Slide 2: Welcome</h2>
-        <ul>
-          <li>Hi, I am Jon and I have decided to create this website about myself where I will talk about the sports I play, the languages I speak, and my hobbies.</li>
-        </ul>
-      </section>
-
-      <!-- Slide 3 -->
-      <section>
-        <h2>Slide 3: About Me</h2>
-        <p>I am a 20-year-old guy, born in Madrid, Spain, and currently on Erasmus in Warsaw, Poland</p>
-
-        <!-- Subslide 3.1 -->
-        <section>
-          <h3>Slide 3.1</h3>
-          <img src="images/Spain_Poland.jpg" alt="Spain_Poland" width="600">
-        </section>
-      </section>
-
-      <!-- Slide 4 -->
-      <section>
-        <h2>Slide 4: Hobbies</h2>
-        <ul>
-          <li>Soccer: I like playing soccer and watching it with my friends</li>
-          <li>Watching Films: I love watching films and my favourite ones are about war</li>
-          <li>Playing videogames: I usually play video games to disconnect from everything, and my favorite is FIFA, which is a soccer game</li>
-          <li>Tennis: I also like tennis, some years ago I used to train and play games but now I just watch it on TV</li>
-          <li>Travelling: I love travelling around the world and the last two years I have visited a lot of countries around Europe and I have also been in Morocco and Dominican Republic</li>
-        </ul>
-
-        <!-- Subslide 4.1 -->
-        <section>
-          <h3>Slide 4.1</h3>
-          <img src="images/hobbies.jpg" alt="Hobbies" width="600">
-        </section>
-      </section>
-
-      <!-- Slide 5 -->
-      <section>
-        <h2>Slide 5: Languages</h2>
-        <img src="images/languages.jpg" alt="Languages" width="600">
-
-        <!-- Subslide 5.1 -->
-        <section>
-          <h3>Slide 5.1</h3>
-          <ul>
-            <li>English: I have a C1 level of English and I have been learning it since I was a kid</li>
-            <li>French: I do not have an official level of French but I learned it in school and I know the minimum to have a conversation</li>
-            <li>Spanish: My native language</li>
-            <li>Polish: I would like to learn it but it is really difficult, and in the time I have been in Poland for Erasmus I just learned the basic things</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- Slide 6 -->
-      <section>
-        <h2>Slide 6: Sports</h2>
-        <ul>
-          <li>Karate: I practiced it for 9 years and I got the brown belt but when I was 14 I stopped practicing it</li>
-          <li>Soccer: I never practiced it in a club but I played a lot in school and I still go to play with my friends on weekends</li>
-          <li>Tennis: I practiced it for 5 years but I stopped because I have a problem with my shoulder that prevents me from playing</li>
-          <li>Swimming: I practiced it when I was in school but I did not like it so I never practiced it again</li>
-        </ul>
-
-        <!-- Subslide 6.1 -->
-        <section>
-          <h3>Slide 6.1</h3>
-          <img src="images/soccer.jpg" alt="Soccer" width="600">
-        </section>
-      </section>
-
-    </div>
+<div class="reveal">
+  <div class="slides" 
+       data-markdown="slides.md" 
+       data-separator="^\n---\n" 
+       data-separator-vertical="^\n##\s" 
+       data-charset="utf-8">
+    <!-- El contenido se carga desde slides.md -->
   </div>
+</div>
 
-  <!-- Scripts de Reveal.js -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
+<!-- Reveal.js scripts -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
 
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      plugins: [ RevealHighlight, RevealNotes ]
-    });
-  </script>
+<script>
+  Reveal.initialize({
+    hash: true,              // URL hash navigation
+    slideNumber: true,       // Mostrar número de slide
+    transition: 'fade',      // transición suave
+    backgroundTransition: 'slide',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+</script>
 
 </body>
 </html>
