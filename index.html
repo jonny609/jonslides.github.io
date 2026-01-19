@@ -5,11 +5,9 @@
   <title>Github Presentation with Reveal.js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Reveal.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css"> <!-- Tema no predeterminado -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css">
 
-  <!-- Highlight.js para código si fuera necesario -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
 </head>
 <body>
@@ -20,11 +18,9 @@
          data-vertical="^\n##\s" 
          data-separator-vertical="^\n##\s"
          data-charset="utf-8">
-      <!-- El contenido se carga desde slides.md -->
     </div>
   </div>
 
-  <!-- Scripts de Reveal.js -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
@@ -32,8 +28,8 @@
 
   <script>
     Reveal.initialize({
-      hash: true,           // permite acceder a slides por URL
-      slideNumber: true,    // muestra número de slide
+      hash: true,
+      slideNumber: true,
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
     });
   </script>
