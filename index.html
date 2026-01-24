@@ -2,52 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Github presentation with Reveal.js</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Reveal.js core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <!-- Reveal.js CSS (misma versión que tu amigo) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/league.css" id="theme">
 
-  <!-- Non-default theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/league.css">
-
-  <!-- Code syntax highlighting (optional but nice) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+  <!-- Custom styles -->
+  <style>
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+    }
+    h1, h2, h3 {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+    p, li {
+      font-size: 1.1em;
+    }
+    .reveal section img {
+      border-radius: 8px;
+      max-width: 60%;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+  <div class="slides">
 
-      <!-- Load Markdown slides -->
-      <section data-markdown="slides.md"
-               data-separator="^---$"
-               data-separator-vertical="^## "
-               data-separator-notes="^Note:"
-               data-charset="utf-8">
-      </section>
+    <!-- Cargar slides desde Markdown -->
+    <section
+      data-markdown="slides.md"
+      data-separator="^---$"
+      data-separator-vertical="^## "
+      data-charset="utf-8">
+    </section>
 
-    </div>
   </div>
+</div>
 
-  <!-- Reveal.js -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<!-- Reveal.js core -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
 
-  <!-- Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<!-- Markdown plugin -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
 
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-    });
-  </script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    backgroundTransition: 'slide',
+    plugins: [ RevealMarkdown ]
+  });
+</script>
 
 </body>
 </html>
